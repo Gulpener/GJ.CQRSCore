@@ -1,6 +1,6 @@
-﻿using CQRSCore.Validation;
+﻿using GJ.CQRSCore.Validation;
 
-namespace CQRSCore.Interfaces
+namespace GJ.CQRSCore.Interfaces
 {
     public interface IValidator<T>
     {

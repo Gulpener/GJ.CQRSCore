@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CQRSCore.Validation
+namespace GJ.CQRSCore.Validation
 {
     public class ValidationException : Exception
     {

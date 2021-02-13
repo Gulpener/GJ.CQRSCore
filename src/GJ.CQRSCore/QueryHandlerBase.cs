@@ -1,8 +1,8 @@
-﻿using CQRSCore.Interfaces;
-using CQRSCore.Validation;
+﻿using GJ.CQRSCore.Interfaces;
+using GJ.CQRSCore.Validation;
 using System;
 
-namespace CQRSCore
+namespace GJ.CQRSCore
 {
     public abstract class QueryHandlerBase<T, X> : IQueryHandler<T, X> where T : IQuery
     {

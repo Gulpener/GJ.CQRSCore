@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CQRSCore.Validation
+namespace GJ.CQRSCore.Validation
 {
     public class ValidationResults
     {

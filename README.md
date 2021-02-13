@@ -1,1 +1,1 @@
-# CQRSCore
+# GJ.CQRSCore

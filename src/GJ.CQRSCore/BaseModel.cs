@@ -1,4 +1,4 @@
-﻿namespace CQRSCore
+﻿namespace GJ.CQRSCore
 {
     public class BaseModel
     {

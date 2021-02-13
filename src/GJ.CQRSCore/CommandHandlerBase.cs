@@ -1,7 +1,7 @@
-﻿using CQRSCore.Interfaces;
-using CQRSCore.Validation;
+﻿using GJ.CQRSCore.Interfaces;
+using GJ.CQRSCore.Validation;
 
-namespace CQRSCore
+namespace GJ.CQRSCore
 {
     public abstract class CommandHandlerBase<T> : ICommandHandler<T> where T : ICommand
     {
