@@ -29,4 +29,14 @@ jobs:
       with: 
        PROJECT_FILE_PATH: src/GJ.CQRSCore/GJ.CQRSCore.csproj  
        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-       PACKAGE_NAME: GJ.CQRSCore  
+       PACKAGE_NAME: GJ.CQRSCore 
+       
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Publish
+      uses: brandedoutcast/publish-nuget@v2.5.2  
+      with: 
+       PROJECT_FILE_PATH: src/GJ.CQRSCore/GJ.CQRSCore.csproj  
+       NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+       PACKAGE_NAME: GJ.CQRSCore
