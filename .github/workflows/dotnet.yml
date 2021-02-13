@@ -31,4 +31,4 @@ jobs:
       with: 
        PROJECT_FILE_PATH: src/CQRSCore/CQRSCore.csproj  
        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-       PACKAGE_NAME: Gertjan's CQRSCore  
+       PACKAGE_NAME: GertjansCQRSCore  
