@@ -8,22 +8,21 @@ namespace GJ.CQRSCore.UnitTests.Validation
     public class ValidationResultsTests
     {
         [TestMethod]
-        public void ValidationResultShouldContainTheCorrectPropertyNames()
+        public void ValidationResultsShouldHaveCorrectResultMessage()
         {
             // Arrange
 
-            string message = "{0} This is a message";
-            string propertyName = "Test";
+            var validationResults = new ValidationResults();
+
 
             // Act
 
-            var validationResult = new ValidationResult(propertyName, message);
+            validationResults.AddValidationResult("Test", "Test message with property: {0}");
+            validationResults.AddValidationResult("Test2", "Test message 2 with property: {0}");
 
             // Assert
 
-            validationResult.Message.Should().Be(message);
-            validationResult.PropertyName.Should().Be(propertyName);
-            validationResult.FormattedMessage.Should().Be("Test This is a message");
+            validationResults.GetMessages().Should().Be("Test message with property: Test\r\nTest message 2 with property: Test2");
         }
     }
 }

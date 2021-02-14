@@ -21,7 +21,7 @@ namespace GJ.CQRSCore.Validation
             }
         }
 
-        internal string GetMessages()
+        public string GetMessages()
         {
             return string.Join("\r\n", validationResults.Select(x => x.FormattedMessage));
         }
