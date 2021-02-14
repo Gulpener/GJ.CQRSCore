@@ -10,5 +10,6 @@
 
         public string PropertyName { get; }
         public string Message { get; }
+        public string FormattedMessage => string.Format(Message, PropertyName);
     }
 }
