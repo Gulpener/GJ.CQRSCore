@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CommandHandlers\" />
+    <Folder Include="Validator\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GJ.CQRSCore" Version="0.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GJ.CQRSCore.Example.Data\GJ.CQRSCore.Example.Data.csproj" />
+    <ProjectReference Include="..\GJ.CQRSCore.Example.Models\GJ.CQRSCore.Example.Models.csproj" />
+  </ItemGroup>
+
+</Project>
