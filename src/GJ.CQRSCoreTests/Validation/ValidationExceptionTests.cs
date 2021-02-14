@@ -8,7 +8,7 @@ namespace GJ.CQRSCore.UnitTests.Validation
     public class ValidationExceptionTests
     {
         [TestMethod]
-        public void ValidationExceptionShouldCorrectlyBeCreatedAndGetTheCorrectMessages()
+        public void ValidationExceptionShouldCorrectlyBeCreatedAndGetTheCorrectMessage()
         {
             // Arrange
 
