@@ -1,5 +1,6 @@
 using GJ.CQRSCore.Example.BusinessLogic.CommandHandlers;
 using GJ.CQRSCore.Example.BusinessLogic.QueryHandlers;
+using GJ.CQRSCore.Example.BusinessLogic.Validator;
 using GJ.CQRSCore.Example.Data;
 using GJ.CQRSCore.Example.Data.Interfaces;
 using GJ.CQRSCore.Example.Data.Models;
@@ -38,6 +39,7 @@ namespace GJ.CQRSCore.Example
             services.AddScoped<IOfficeRepository, OfficeRepository>();
             services.AddScoped<IQueryHandler<GetCompanyWithCeoListQuery, IList<CompanyCeoModel>>, GetCompanyWithCeoListQueryHandler>();
             services.AddScoped<ICommandHandler<AddCompanyWithOfficeCommand>, AddCompanyWithOfficeCommandHandler>();
+            services.AddScoped<IValidator<AddCompanyWithOfficeCommand>, AddCompanyWithOfficeCommandValidator>();
 
             services.AddControllers();
         }

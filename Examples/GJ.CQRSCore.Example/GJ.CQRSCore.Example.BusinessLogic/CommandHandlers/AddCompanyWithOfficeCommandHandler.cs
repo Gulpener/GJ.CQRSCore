@@ -1,6 +1,7 @@
 ﻿using GJ.CQRSCore.Example.Data.Interfaces;
 using GJ.CQRSCore.Example.Data.Models;
 using GJ.CQRSCore.Example.Models.Commands;
+using GJ.CQRSCore.Interfaces;
 using System;
 using System.Collections.Generic;
 
@@ -11,7 +12,7 @@ namespace GJ.CQRSCore.Example.BusinessLogic.CommandHandlers
         private readonly ICompanyRepository _companyRepository;
         private readonly IOfficeRepository _officeRepository;
 
-        public AddCompanyWithOfficeCommandHandler(ICompanyRepository companyRepository, IOfficeRepository officeRepository)
+        public AddCompanyWithOfficeCommandHandler(IValidator<AddCompanyWithOfficeCommand> validator, ICompanyRepository companyRepository, IOfficeRepository officeRepository) : base(validator)
         {
             _companyRepository = companyRepository;
             _officeRepository = officeRepository;
