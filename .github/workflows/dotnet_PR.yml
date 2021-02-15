@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  buildNugetPackage:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -22,3 +22,20 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: ./src/
+  buildExampleProjects:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: ./Examples/GJ.CQRSCore.Example/
+    - name: Build
+      run: dotnet build --no-restore
+      working-directory: ./Examples/GJ.CQRSCore.Example/
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+      working-directory: ./Examples/GJ.CQRSCore.Example/
