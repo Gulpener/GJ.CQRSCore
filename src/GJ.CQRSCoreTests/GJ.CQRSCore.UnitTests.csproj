@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Copyright>Copyright © 2021</Copyright>
-    <AssemblyVersion>0.0.3.0</AssemblyVersion>
-    <FileVersion>0.0.3.0</FileVersion>
-    <Version>0.0.3.0</Version>
+    <AssemblyVersion>0.0.4.0</AssemblyVersion>
+    <FileVersion>0.0.4.0</FileVersion>
+    <Version>0.0.4.0</Version>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
